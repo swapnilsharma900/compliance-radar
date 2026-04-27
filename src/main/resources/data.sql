@@ -5,22 +5,22 @@
 
 -- USERS
 INSERT INTO users (id, full_name, email, password, phone_number, role, district) VALUES
-  ('a1000000-0000-0000-0000-000000000001', 'Ramesh Sharma',   'admin@rspcb.gov.in',       '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000001', 'ADMIN',     'Jaipur'),
-  ('a1000000-0000-0000-0000-000000000002', 'Suresh Meena',    'inspector1@rspcb.gov.in',  '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000002', 'INSPECTOR', 'Pali'),
-  ('a1000000-0000-0000-0000-000000000003', 'Kavita Joshi',    'inspector2@rspcb.gov.in',  '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000003', 'INSPECTOR', 'Jodhpur'),
-  ('a1000000-0000-0000-0000-000000000004', 'Priya Verma',     'citizen1@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000004', 'CITIZEN',   'Pali'),
-  ('a1000000-0000-0000-0000-000000000005', 'Anil Kumar',      'citizen2@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000005', 'CITIZEN',   'Jodhpur'),
-  ('a1000000-0000-0000-0000-000000000006', 'Sunita Rathore',  'citizen3@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000006', 'CITIZEN',   'Bhilwara')
+  ('a1000000-0000-0000-0000-000000000001', 'Ramesh Sharma',   'admin@rspcb.gov.in',       '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000001', 'ADMIN',     'Jaipur'),  -- Password: password123
+  ('a1000000-0000-0000-0000-000000000002', 'Suresh Meena',    'inspector1@rspcb.gov.in',  '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000002', 'INSPECTOR', 'Pali'),    -- Password: password123
+  ('a1000000-0000-0000-0000-000000000003', 'Kavita Joshi',    'inspector2@rspcb.gov.in',  '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000003', 'INSPECTOR', 'Jodhpur'), -- Password: password123
+  ('a1000000-0000-0000-0000-000000000004', 'Priya Verma',     'citizen1@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000004', 'CITIZEN',   'Pali'),    -- Password: password123
+  ('a1000000-0000-0000-0000-000000000005', 'Anil Kumar',      'citizen2@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000005', 'CITIZEN',   'Jodhpur'), -- Password: password123
+  ('a1000000-0000-0000-0000-000000000006', 'Sunita Rathore',  'citizen3@saaf.in',         '$2a$10$hoLFNIH2AvFaxHslc2JjZ.bV/W3lW3PaCcZo9uWFPLk.jjaRgRLy2', '9414000006', 'CITIZEN',   'Bhilwara') -- Password: password123
 ON CONFLICT (email) DO NOTHING;
 
 -- INDUSTRIAL UNITS (Real Rajasthan industrial towns)
-INSERT INTO industrial_units (id, name, district, lat, lon, compliance_score) VALUES
-  ('b1000000-0000-0000-0000-000000000001', 'Pali Textile Dyeing Unit A',     'Pali',     25.7711, 73.3234, 42),
-  ('b1000000-0000-0000-0000-000000000002', 'Pali Textile Dyeing Unit B',     'Pali',     25.7730, 73.3251, 67),
-  ('b1000000-0000-0000-0000-000000000003', 'Bhilwara Synthetic Mills',       'Bhilwara', 25.3462, 74.6359, 55),
-  ('b1000000-0000-0000-0000-000000000004', 'Jodhpur Stone Processing Plant', 'Jodhpur',  26.2389, 73.0243, 78),
-  ('b1000000-0000-0000-0000-000000000005', 'Kota Chemical Works',            'Kota',     25.1802, 75.8069, 30),
-  ('b1000000-0000-0000-0000-000000000006', 'Alwar Auto Parts Factory',       'Alwar',    27.5530, 76.6346, 88)
+INSERT INTO industrial_units (id, name, district, lat, lon, compliance_score, category) VALUES
+  ('b1000000-0000-0000-0000-000000000001', 'Pali Textile Dyeing Unit A',     'Pali',     25.7711, 73.3234, 42, 'TEXTILE'),
+  ('b1000000-0000-0000-0000-000000000002', 'Pali Textile Dyeing Unit B',     'Pali',     25.7730, 73.3251, 67, 'TEXTILE'),
+  ('b1000000-0000-0000-0000-000000000003', 'Bhilwara Synthetic Mills',       'Bhilwara', 25.3462, 74.6359, 55, 'TEXTILE'),
+  ('b1000000-0000-0000-0000-000000000004', 'Jodhpur Stone Processing Plant', 'Jodhpur',  26.2389, 73.0243, 78, 'OTHER'),
+  ('b1000000-0000-0000-0000-000000000005', 'Kota Chemical Works',            'Kota',     25.1802, 75.8069, 30, 'CHEMICAL'),
+  ('b1000000-0000-0000-0000-000000000006', 'Alwar Auto Parts Factory',       'Alwar',    27.5530, 76.6346, 88, 'OTHER')
 ON CONFLICT DO NOTHING;
 
 -- SENSOR NODES
@@ -63,14 +63,14 @@ INSERT INTO satellite_observations (id, detected_at, lat, lon, anomaly_type, ndw
 ON CONFLICT DO NOTHING;
 
 -- CITIZEN REPORTS
-INSERT INTO citizen_reports (id, user_id, submitted_at, issue_type, lat, lon, status, photo_link, saaf_points) VALUES
+INSERT INTO citizen_reports (id, user_id, submitted_at, issue_type, description, lat, lon, district, status, photo_link, saaf_points) VALUES
   -- Near Pali Unit A (within 500m — fusion candidate)
-  ('f1000000-0000-0000-0000-000000000001', 'a1000000-0000-0000-0000-000000000004', NOW() - INTERVAL '1 hour',  'WATER', 25.7713, 73.3236, 'SUBMITTED', 'https://storage.saaf.in/reports/pali_001.jpg', 50),
-  ('f1000000-0000-0000-0000-000000000002', 'a1000000-0000-0000-0000-000000000004', NOW() - INTERVAL '2 hours', 'WATER', 25.7719, 73.3241, 'SUBMITTED', 'https://storage.saaf.in/reports/pali_002.jpg', 50),
+  ('f1000000-0000-0000-0000-000000000001', 'a1000000-0000-0000-0000-000000000004', NOW() - INTERVAL '1 hour',  'WATER_DUMPING', 'Discolored water flowing near the textile unit.', 25.7713, 73.3236, 'Pali', 'SUBMITTED', 'https://storage.saaf.in/reports/pali_001.jpg', 50),
+  ('f1000000-0000-0000-0000-000000000002', 'a1000000-0000-0000-0000-000000000004', NOW() - INTERVAL '2 hours', 'WATER_DUMPING', 'Strong chemical smell from the stream.', 25.7719, 73.3241, 'Pali', 'SUBMITTED', 'https://storage.saaf.in/reports/pali_002.jpg', 50),
   -- Jodhpur report
-  ('f1000000-0000-0000-0000-000000000003', 'a1000000-0000-0000-0000-000000000005', NOW() - INTERVAL '30 minutes', 'AIR', 26.2392, 73.0247, 'SUBMITTED', 'https://storage.saaf.in/reports/jdh_001.jpg', 50),
+  ('f1000000-0000-0000-0000-000000000003', 'a1000000-0000-0000-0000-000000000005', NOW() - INTERVAL '30 minutes', 'AIR_POLLUTION', 'Thick black smoke from stone factory.', 26.2392, 73.0247, 'Jodhpur', 'SUBMITTED', 'https://storage.saaf.in/reports/jdh_001.jpg', 50),
   -- Bhilwara report (near unit — fusion candidate)
-  ('f1000000-0000-0000-0000-000000000004', 'a1000000-0000-0000-0000-000000000006', NOW() - INTERVAL '90 minutes', 'AIR', 25.3465, 74.6361, 'SUBMITTED', NULL, 50),
+  ('f1000000-0000-0000-0000-000000000004', 'a1000000-0000-0000-0000-000000000006', NOW() - INTERVAL '90 minutes', 'AIR_POLLUTION', 'Continuous dust emissions.', 25.3465, 74.6361, 'Bhilwara', 'SUBMITTED', NULL, 50),
   -- Resolved report
-  ('f1000000-0000-0000-0000-000000000005', 'a1000000-0000-0000-0000-000000000005', NOW() - INTERVAL '3 days', 'WASTE', 26.2400, 73.0260, 'RESOLVED', 'https://storage.saaf.in/reports/jdh_002.jpg', 50)
+  ('f1000000-0000-0000-0000-000000000005', 'a1000000-0000-0000-0000-000000000005', NOW() - INTERVAL '3 days', 'ILLEGAL_WASTE', 'Illegal dumping of solid waste.', 26.2400, 73.0260, 'Jodhpur', 'RESOLVED', 'https://storage.saaf.in/reports/jdh_002.jpg', 50)
 ON CONFLICT DO NOTHING;
