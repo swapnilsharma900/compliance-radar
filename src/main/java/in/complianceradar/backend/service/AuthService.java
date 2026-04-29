@@ -80,6 +80,8 @@ public class AuthService {
                 user.getRole(),
                 user.getPhoneNumber(),
                 user.getDistrict(),
+                user.getSaafPoints(),
+                user.getStreakDays(),
                 user.getCreatedAt()
         );
     }

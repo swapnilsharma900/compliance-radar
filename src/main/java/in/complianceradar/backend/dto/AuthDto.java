@@ -39,6 +39,8 @@ public class AuthDto {
         UserRole role,
         String phoneNumber,
         String district,
+        Integer saafPoints,
+        Integer streakDays,
         LocalDateTime createdAt
     ) {}
 }

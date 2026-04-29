@@ -5,33 +5,33 @@ const CitizenDashboard = () => {
   const [step, setStep] = useState(1); // 1: Default, 2: Form, 3: Success
 
   return (
-    <div style={{ 
-      maxWidth: '400px', 
-      margin: '0 auto', 
-      height: '100vh', 
+    <div style={{
+      maxWidth: '400px',
+      margin: '0 auto',
+      height: '100vh',
       backgroundColor: 'var(--bg-primary)',
       display: 'flex',
       flexDirection: 'column',
       boxShadow: 'var(--shadow-lg)'
     }}>
       {/* Mobile Header */}
-      <header style={{ 
-        backgroundColor: 'var(--accent-primary)', 
-        color: 'white', 
-        padding: '1.5rem 1rem 1rem', 
+      <header style={{
+        backgroundColor: 'var(--accent-primary)',
+        color: 'white',
+        padding: '1.5rem 1rem 1rem',
         textAlign: 'center',
         borderBottomLeftRadius: '20px',
         borderBottomRightRadius: '20px'
       }}>
         <h2 style={{ margin: 0, fontSize: '1.5rem' }}>Saaf Rajasthan</h2>
         <p style={{ opacity: 0.8, fontSize: '0.875rem' }}>Citizen Portal</p>
-        
-        <div style={{ 
-          backgroundColor: 'rgba(255,255,255,0.2)', 
-          display: 'inline-flex', 
-          alignItems: 'center', 
-          gap: '0.5rem', 
-          padding: '0.25rem 0.75rem', 
+
+        <div style={{
+          backgroundColor: 'rgba(255,255,255,0.2)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          padding: '0.25rem 0.75rem',
           borderRadius: '20px',
           marginTop: '1rem'
         }}>
@@ -41,7 +41,7 @@ const CitizenDashboard = () => {
 
       {/* Mobile Content */}
       <div style={{ flex: 1, padding: '1.5rem', overflowY: 'auto' }}>
-        
+
         {step === 1 && (
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <div style={{ marginBottom: '2rem' }}>
@@ -49,12 +49,12 @@ const CitizenDashboard = () => {
               <p className="text-secondary" style={{ marginTop: '0.5rem', fontSize: '0.875rem' }}>Nearby Incidents: 0</p>
             </div>
 
-            <button 
+            <button
               onClick={() => setStep(2)}
-              className="btn-primary" 
+              className="btn-primary"
               style={{ width: '100%', padding: '1rem', fontSize: '1.25rem', borderRadius: '50px', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}
             >
-              <Camera /> Report Karo
+              <Camera /> Report Now
             </button>
           </div>
         )}
@@ -62,7 +62,7 @@ const CitizenDashboard = () => {
         {step === 2 && (
           <div>
             <h3 style={{ marginBottom: '1.5rem' }}>New Report</h3>
-            
+
             <div className="form-group">
               <label className="form-label">Location</label>
               <div className="input-with-icon">
@@ -73,10 +73,10 @@ const CitizenDashboard = () => {
 
             <div className="form-group">
               <label className="form-label">Upload Photo</label>
-              <div style={{ 
-                border: '2px dashed var(--border-color)', 
-                borderRadius: 'var(--radius-md)', 
-                padding: '2rem', 
+              <div style={{
+                border: '2px dashed var(--border-color)',
+                borderRadius: 'var(--radius-md)',
+                padding: '2rem',
                 textAlign: 'center',
                 backgroundColor: 'rgba(0,0,0,0.02)',
                 cursor: 'pointer'
@@ -103,9 +103,9 @@ const CitizenDashboard = () => {
             <CheckCircle size={64} color="var(--accent-success)" style={{ margin: '0 auto 1rem' }} />
             <h2 style={{ color: 'var(--accent-success)', marginBottom: '0.5rem' }}>Report Submitted!</h2>
             <p className="text-secondary" style={{ marginBottom: '2rem' }}>Thank you for keeping Rajasthan clean.</p>
-            
-            <div style={{ 
-              backgroundColor: 'rgba(99, 102, 241, 0.1)', 
+
+            <div style={{
+              backgroundColor: 'rgba(99, 102, 241, 0.1)',
               color: 'var(--accent-primary)',
               padding: '1rem',
               borderRadius: 'var(--radius-md)',

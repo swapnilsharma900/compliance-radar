@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LayoutDashboard, Factory, AlertTriangle, FileText, Map, LogOut, Activity, ClipboardCheck, Smartphone } from 'lucide-react';
+import { LayoutDashboard, Factory, AlertTriangle, FileText, Map, LogOut, Activity, ClipboardCheck, Smartphone, User } from 'lucide-react';
 import './Layout.css';
 
 const Layout = () => {
@@ -18,6 +18,7 @@ const Layout = () => {
     { path: '/alert-detail', label: 'Alert Details', icon: <AlertTriangle size={20} /> },
     { path: '/sensor-live', label: 'Sensor Live Feed', icon: <Activity size={20} /> },
     { path: '/inspector-view', label: 'Inspector View', icon: <ClipboardCheck size={20} /> },
+    { path: '/profile', label: 'My Profile', icon: <User size={20} /> },
     { path: '/citizen', label: 'Citizen View (Mobile)', icon: <Smartphone size={20} /> },
   ];
 

@@ -36,6 +36,27 @@ public class User {
     @Column(length = 100)
     private String district;
 
+    @Column(name = "ward_number")
+    private Integer wardNumber;
+
+    @Column(name = "ward_name", length = 100)
+    private String wardName;
+
+    @Column(name = "saaf_points", nullable = false)
+    @Builder.Default
+    private Integer saafPoints = 0;
+
+    @Column(name = "streak_days", nullable = false)
+    @Builder.Default
+    private Integer streakDays = 0;
+
+    @Column(name = "last_report_date")
+    private LocalDateTime lastReportDate;
+
+    @Column(name = "is_active", nullable = false)
+    @Builder.Default
+    private Boolean isActive = true;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

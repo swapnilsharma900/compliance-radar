@@ -8,6 +8,7 @@ import AlertDetail from './pages/AlertDetail';
 import SensorLive from './pages/SensorLive';
 import CitizenDashboard from './pages/CitizenDashboard';
 import InspectorView from './pages/InspectorView';
+import Profile from './pages/Profile';
 
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="alert-detail" element={<AlertDetail />} />
         <Route path="sensor-live" element={<SensorLive />} />
         <Route path="inspector-view" element={<InspectorView />} />
+        <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>
   );
